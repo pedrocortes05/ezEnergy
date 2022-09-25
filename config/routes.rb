@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get "home" => "home#index"
 
-  get "test" => "home#test"
+  get "unity" => "home#unity"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
