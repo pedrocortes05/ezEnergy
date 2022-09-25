@@ -1,3 +1,31 @@
+<%= render partial: "layouts/header" %>
+
+<div class="row">
+  <div class="col-md-7">
+    <h2>Calcule y optimice su consumo electrico</h2>
+    <p>A traves de nuestro simulador podra calcular el rendimiento que paneles solares y otros equipos sostenibles tendran en su hogar</p>
+  </div>
+  <div class="col-md-5">
+  <%= image_tag("house2.jpg", height: "225", width: "auto") %>
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row">
+  <div class="col-md-7 order-md-2">
+    <h2 class="fw-normal lh-1">Obtenga un mejor rendimiento de su electricidad <span class="text-muted">See for yourself.</span></h2>
+    <p class="lead">Reduzca su consumo electrico con productos con mayor rendimiento.</p>
+  </div>
+  <div class="col-md-5 order-md-1">
+    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+
 <div id="unity-container" class="unity-desktop">
   <canvas id="unity-canvas" width=960 height=600></canvas>
   <div id="unity-loading-bar">
@@ -46,9 +74,9 @@
   }
 
   var config = {
-    dataUrl: "<%= asset_path("WebGL2test.data") %>",
-    frameworkUrl: "<%= asset_path("WebGL2test.framework") %>",
-    codeUrl: "<%= asset_path("WebGL2test.wasm") %>",
+    dataUrl: "<%= asset_path("ezEnergyWebGL.data") %>",
+    frameworkUrl: "<%= asset_path("ezEnergyWebGL.framework") %>",
+    codeUrl: "<%= asset_path("ezEnergyWebGL.wasm") %>",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "DefaultCompany",
     productName: "Enseñable",
@@ -90,7 +118,7 @@
   loadingBar.style.display = "block";
 
   var script = document.createElement("script");
-  script.src = "<%= asset_url("WebGL2test.loader") %>";
+  script.src = "<%= asset_url("ezEnergyWebGL.loader") %>";
   script.onload = () => {
     createUnityInstance(canvas, config, (progress) => {
       progressBarFull.style.width = 100 * progress + "%";
