@@ -10,8 +10,7 @@ class HomeController < ApplicationController
     @waste = (newest_carbon.refri * 0.5) + (newest_carbon.ac * 1) + (newest_carbon.people * 15)
 
     newest_calc = Calc.last
-    @energy = ((newest_calc.eff / 100) * newest_calc.watts)
-    # price = ()
+    @energy = ((newest_calc.eff.to_f / 100) * newest_calc.watts)
 
   end
 

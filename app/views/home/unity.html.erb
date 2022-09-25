@@ -33,6 +33,12 @@
   </div>
 </div>
 
+<div class="container-sm input-group my-5" style="padding-left: 300px; padding-right: 300px;">
+  <h3 style="margin-right: 50px;">Energia generada por los paneles solares:</h3>
+  <input type="text" class="form-control" value="<%= @energy %>" aria-label="Amount (to the nearest dollar)">
+  <span class="input-group-text">kWh</span>
+</div>
+
 <script>
   var container = document.querySelector("#unity-container");
   var canvas = document.querySelector("#unity-canvas");
@@ -128,5 +134,10 @@
     document.body.appendChild(script);
   }
 
+  function not_runWebGL() {
+    document.getElementById("unity-container").remove();
+  }
+
   document.getElementById("run").addEventListener("click", runWebGL);
+  document.getElementById("not_run").addEventListener("click", not_runWebGL);
 </script>
