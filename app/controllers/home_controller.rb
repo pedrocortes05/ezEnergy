@@ -2,6 +2,6 @@ class HomeController < ApplicationController
   def index
   end
 
-  def test
+  def unity
   end
 end
