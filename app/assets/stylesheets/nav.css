@@ -1,0 +1,10 @@
+.nav-link {
+    font-size: 22px;
+    text-decoration: none;
+    color: #777777;
+}
+
+.nav-link.active {
+    font-size: 22px;
+    color: #12C6C0;
+}

@@ -48,9 +48,9 @@
   }
 
   var config = {
-    dataUrl: "<%= asset_path("ezEnergyWebGL.data") %>",
-    frameworkUrl: "<%= asset_path("ezEnergyWebGL.framework") %>",
-    codeUrl: "<%= asset_path("ezEnergyWebGL.wasm") %>",
+    dataUrl: "<%= asset_path("ezEnergyWebGL3.data") %>",
+    frameworkUrl: "<%= asset_path("ezEnergyWebGL3.framework") %>",
+    codeUrl: "<%= asset_path("ezEnergyWebGL3.wasm") %>",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "DefaultCompany",
     productName: "Enseñable",
@@ -92,7 +92,7 @@
   loadingBar.style.display = "block";
 
   var script = document.createElement("script");
-  script.src = "<%= asset_url("ezEnergyWebGL.loader") %>";
+  script.src = "<%= asset_url("ezEnergyWebGL3.loader") %>";
   script.onload = () => {
     createUnityInstance(canvas, config, (progress) => {
       progressBarFull.style.width = 100 * progress + "%";
