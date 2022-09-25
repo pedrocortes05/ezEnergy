@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_25_141643) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_25_150315) do
   create_table "calcs", force: :cascade do |t|
     t.integer "waste"
     t.integer "eff"
     t.integer "watts"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price"
   end
 
   create_table "carbons", force: :cascade do |t|

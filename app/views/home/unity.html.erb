@@ -1,5 +1,11 @@
 <%= render partial: "layouts/header" %>
+<%= stylesheet_link_tag "bord.css" %>
 
+
+<div class="d-flex justify-content-evenly mb-5">
+  <button id="run" class="btn btn-primary">Correr simulación</button>
+  <button id="not_run" class="btn btn-primary">Apagar simulación</button> 
+</div>
 <div id="unity-container" class="container unity-desktop">
   <canvas id="unity-canvas" width=960 height=600></canvas>
   <div id="unity-loading-bar">
@@ -12,9 +18,21 @@
   <div id="unity-footer">
     <div id="unity-webgl-logo"></div>
     <div id="unity-fullscreen-button"></div>
-    <div id="unity-build-title">Enseñable</div>
+    <div id="unity-build-title">EzEnergy</div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row" style="padding-right: 5rem;">
+    <div class="col">
+      <%= render partial: "carbon_form" %>
+    </div>
+    <div class="col">
+      <%= render partial: "calc_form" %>
+    </div>
+  </div>
+</div>
+
 <script>
   var container = document.querySelector("#unity-container");
   var canvas = document.querySelector("#unity-canvas");
@@ -104,5 +122,11 @@
       alert(message);
     });
   };
-  document.body.appendChild(script);
+  // document.body.appendChild(script);
+
+  function runWebGL() {
+    document.body.appendChild(script);
+  }
+
+  document.getElementById("run").addEventListener("click", runWebGL);
 </script>
